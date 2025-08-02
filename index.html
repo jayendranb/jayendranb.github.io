@@ -978,9 +978,7 @@
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const rate = scrolled * -0.5;
-    
-    const backgrounds = document.querySelectorAll('body::before, body::after');
-    document.body.style.transform = `translateY(${rate}px)`;
+ //   document.body.style.transform = `translateY(${rate}px)`;
   });
 
   // Soft typing effect for the hero description
@@ -1021,11 +1019,11 @@
     element.addEventListener('mouseenter', function() {
       this.style.transform = this.style.transform.includes('scale') 
         ? this.style.transform 
-        : this.style.transform + ' scale(1.02)';
+        : this.style.transform + ' scale(1.01)'; // reduced from 1.02
     });
     
     element.addEventListener('mouseleave', function() {
-      this.style.transform = this.style.transform.replace(' scale(1.02)', '');
+      this.style.transform = this.style.transform.replace(' scale(1.01)', '');
     });
   });
 </script>
