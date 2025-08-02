@@ -606,7 +606,20 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+    @keyframes gentleFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-4px) rotate(0.5deg); } /* reduced from -10px/1deg */
+}
+
+.project-card:hover,
+.skill-category:hover,
+.education-item:hover {
+  transform: translateY(-3px); /* reduced from -5px/-8px */
+}
+
+.stat-item:hover {
+  transform: scale(1.01); /* reduced from 1.03 */
+}
     /* Scroll Animation */
     .fade-in {
       opacity: 0;
